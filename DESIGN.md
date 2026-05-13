@@ -319,3 +319,12 @@ Verification status: Phase 4 Complete. GRPO Math Engine validated. Core Pipeline
 
 
 3. Once Phase 1 is done, test it out yourself. If you're happy, reply: `"Proceed to Phase 2"`. Repeat this cadence until the core engine structure is completely complete!
+
+## Phase 5: Live ML Weights & Media Generation (Option B)
+### Target Goal
+Replace worker stubs with live, operational model weights for F5-TTS and LivePortrait. Take a real 10-second audio sample and a single portrait image baseline, and generate a real, talking `.mp4` file saved locally.
+
+### Target Files to Modify/Create
+* `workers/audio_worker/tts_engine.py` (Swap stub out for real F5-TTS pipeline)
+* `workers/video_worker/inference.py` (Swap stub out for real LivePortrait pipeline)
+* `run_live_pipeline.py` (A master execution script to run an end-to-end live test)
